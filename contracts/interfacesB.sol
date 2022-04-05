@@ -21,7 +21,5 @@ contract B {
       interfaceA a = interfaceA (addressA);
       a.setNumber(_number);
   }
-
-
 }
 

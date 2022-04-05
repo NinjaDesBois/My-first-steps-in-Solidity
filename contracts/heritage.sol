@@ -21,12 +21,23 @@ contract Owner{
 contract heritage is Owner{
     uint number;
  
-    function setNumber(uint _number) public isOwner{
+    function setNumber(uint _number) public virtual isOwner{
         number = _number;
     }
 
     function getNumber() public view isOwner returns (uint){
         return number;
     }
+}
+
+//Inheritance with virutal and override 
+
+contract inheritance is heritage { 
+    
+ 
+    function setNumber(uint _number) public override isOwner{
+        number = _number;
+    }
+
 }
 
